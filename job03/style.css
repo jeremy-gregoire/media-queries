@@ -1,0 +1,28 @@
+/* Style par défaut */
+main {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+section {
+  width: 300px;
+  height: 300px;
+  background-color: #88c1d0;
+}
+
+/* Style pour une taille moyenne d'écran */
+@media only screen and (min-width: 768px) and (max-width: 1599px) {
+  main {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+/* Style pour une petite taille d'écran */
+@media only screen and (max-width: 767px) {
+  main {
+    grid-template-columns: max-content;
+  }
+}
