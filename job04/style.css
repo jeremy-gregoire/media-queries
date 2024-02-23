@@ -1,0 +1,31 @@
+/* Style par défaut */
+.navbar {
+  display: block;
+}
+
+.btn-open-menu {
+  display: none;
+}
+
+/* Style pour une petite taille d'écrans */
+@media only screen and (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+
+  .btn-open-menu {
+    display: block;
+  }
+
+  .btn-open-menu span {
+    display: none;
+  }
+
+  .btn-open-menu::after {
+    content: 'close';
+  }
+
+  .navbar:target {
+    display: block;
+  }
+}
