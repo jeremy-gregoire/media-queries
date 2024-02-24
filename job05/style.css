@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*,
+*::before,
+*::after {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 100%, 99%);
+}
+
+header {
+  background-color: hsl(220, 6%, 48%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 18px;
+}
+
+.colored {
+  color: hsl(206, 54%, 52%);
+}
+
+/* La barre de navigation */
+header nav {
+  width: 50%;
+}
+
+header nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-inline-end: 18px;
+}
+
+/* La barre de recherche */
+header input[type='text'] {
+  background-color: hsl(0, 0%, 84%);
+  border-radius: 15px;
+  border: 1px solid hsl(227, 6%, 69%);
+  height: 32px;
+  width: 265px;
+  padding-inline: 10px;
+}
+
+/* Le contenue principale */
+main {
+  background-color: hsl(0, 0%, 100%);
+  margin: 55px;
+  padding-inline: 30px;
+}
+
+/* Pour chaque section de la page */
+main section {
+  padding-block: 30px;
+}
+
+main section:not(:last-child) {
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+}
+
+/* La description de la compagnie */
+main .company-desc {
+  text-align: center;
+}
+
+main .company-desc h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 6em;
+  font-style: normal;
+  margin: 14px;
+}
+
+main .company-desc p {
+  width: 50%;
+  margin: auto;
+}
+
+/* Toutes les aperçues */
+main .preview {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main .preview article {
+  padding: 8px;
+  box-shadow: 0 0 5px 2px hsla(0, 0%, 0%, 0.5);
+  border-radius: 2px;
+}
+
+main .preview article img {
+  display: block;
+  height: 145px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tous les servir */
+main .servives {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main .servives article {
+  width: 450px;
+}
+
+main .servives article > *:not(:first-child) {
+  margin-block-start: 15px;
+}
+
+main .servives article div {
+  display: flex;
+  align-items: center;
+}
+
+main .servives article div img {
+  width: 25px;
+  margin-inline-end: 10px;
+}
+
+main .servives article a {
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(206, 54%, 52%);
+}
+
+main .servives article a::after {
+  content: ' >';
+}
+
+/* La section "À propos de BloomPetals" */
+main .about-company h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: normal;
+  margin: 14px;
+}
+
+main .about-company p {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+/* La section "Pourquoi choisir BloomPetals ?" */
+main .why-that-company h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: normal;
+  margin: 14px;
+}
+
+main .why-that-company > p {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-block-start: 25px;
+}
+
+main .why-that-company div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main .why-that-company div article {
+  width: 450px;
+}
+
+main .why-that-company div article h2 {
+  text-align: center;
+  font-weight: 600;
+  margin: 14px;
+}
+
+main .why-that-company div article p {
+  text-align: center;
+}
+
+/* La section "À propos de l'équipe" */
+main .about-team h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: normal;
+  margin: 14px;
+}
+
+main .about-team div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-block-start: 40px;
+}
+
+main .about-team div img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Le formulaire de contact */
+main .form-contact {
+  width: 50%;
+  margin: auto;
+}
+
+main .form-contact h1 {
+  text-align: center;
+  font-weight: 600;
+  margin: 14px;
+}
+
+main .form-contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+main .form-contact form input,
+main .form-contact form select,
+main .form-contact form textarea {
+  margin-block-end: 14px;
+}
+
+main .form-contact form select {
+  padding: 10px;
+}
+
+main .form-contact form label {
+  margin-block-end: 4px;
+}
+
+main .form-contact form input[type='text'] {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+main .form-contact form textarea {
+  resize: none;
+  padding: 10px;
+}
+
+main .form-contact form input[type='submit'] {
+  align-self: flex-end;
+  width: 100px;
+  padding: 10px;
+}
+
+/* La galerie de fleur */
+main .image-gallery {
+  margin: 0px auto;
+  columns: 4;
+  column-gap: 10px;
+  break-inside: avoid;
+}
+
+main .image-gallery img:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+main .image-gallery img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Le pied de page */
+footer {
+  background-color: hsl(220, 6%, 48%);
+  height: 75px;
+}
