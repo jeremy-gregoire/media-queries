@@ -1,28 +1,19 @@
 /* Style par défaut */
-.navbar {
-  display: block;
-}
-
-.btn-open-menu {
+.btn-menu,
+.btn-close {
   display: none;
 }
 
 /* Style pour une petite taille d'écrans */
 @media only screen and (max-width: 767px) {
-  .navbar {
+  .btn-menu,
+  .btn-close {
+    display: inline;
+  }
+
+  .navbar,
+  .navbar:target + .btn-menu {
     display: none;
-  }
-
-  .btn-open-menu {
-    display: block;
-  }
-
-  .btn-open-menu span {
-    display: none;
-  }
-
-  .btn-open-menu::after {
-    content: 'close';
   }
 
   .navbar:target {
