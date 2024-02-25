@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*,
+*::before,
+*::after {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 100%, 99%);
+}
+
+.colored {
+  color: hsl(206, 54%, 52%);
+}
+
+/* ============== Nouveau code CSS ============== */
+/* L'entête de page */
+header {
+  background-color: hsl(220, 6%, 48%);
+}
+
+/* La barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar ul li {
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.navbar ul li:not(:last-child) {
+  padding-right: 5px;
+}
+
+.navbar ul li a {
+  display: block;
+  padding-block: 25px;
+  padding-inline: 25px;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: hsl(220, 6%, 52%);
+}
+
+/* La barre de recherche */
+.navbar input[type='text'] {
+  background-color: hsl(0, 0%, 84%);
+  border-radius: 15px;
+  border: 1px solid hsl(227, 6%, 69%);
+  width: 265px;
+  height: 32px;
+  margin: 15px;
+  padding-inline: 10px;
+}
+
+/* Le conteneur principal */
+main {
+  background-color: hsl(0, 0%, 100%);
+  margin: 40px;
+}
+
+/* Les sections de chaque page */
+section {
+  margin-inline: 30px;
+  padding-block: 30px;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+}
+
+section h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: normal;
+  margin: 14px;
+}
+
+section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25em;
+  font-style: normal;
+  margin: 14px;
+}
+
+section h1.firm-title {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 6em;
+  font-style: normal;
+  margin: 14px;
+}
+
+section p.main-desc {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+/* Les aperçus de galerie */
+section.gallery-preview {
+  display: grid;
+  grid-template-columns: repeat(4, 216px);
+  justify-content: space-evenly;
+  gap: 25px;
+}
+
+section.gallery-preview article {
+  padding: 8px;
+  box-shadow: 0 0 5px 2px hsla(0, 0%, 0%, 0.5);
+  border-radius: 2px;
+}
+
+section.gallery-preview article img {
+  display: block;
+  height: 145px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Les services */
+section.services {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  justify-content: space-evenly;
+  gap: 25px;
+}
+
+section.services article div {
+  display: flex;
+}
+
+section.services article div.services-title img {
+  width: 25px;
+}
+
+section.services article div.services-title h1 {
+  text-align: left;
+  font-size: 1.25em;
+}
+
+section.services article p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block: 15px;
+}
+
+section.services article a {
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(206, 54%, 52%);
+}
+
+section.services article a::after {
+  content: ' >';
+}
+
+/* Pourquoi choisir BloomPetals */
+section.why-choose-bloompetals div {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 300px);
+  gap: 10px;
+}
+
+section.why-choose-bloompetals > p {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-block-start: 25px;
+}
+
+/* À propos de l'équipe */
+section.about-team div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-block-start: 40px;
+}
+
+section.about-team div img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Galerie d'image */
+section.image-gallery article {
+  margin: 0px auto;
+  columns: 4;
+  column-gap: 10px;
+  break-inside: avoid;
+  margin-block-start: 45px;
+}
+
+section.image-gallery article img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+section.image-gallery article img:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+/* Formulaire de contact */
+section.form-contact {
+  width: 50%;
+  margin: auto;
+}
+
+section.form-contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+section.form-contact form input,
+section.form-contact form select,
+section.form-contact form textarea {
+  margin-block-end: 14px;
+}
+
+section.form-contact form select {
+  padding: 10px;
+}
+
+section.form-contact form label {
+  margin-block-end: 4px;
+}
+
+section.form-contact form input[type='text'] {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+section.form-contact form textarea {
+  resize: none;
+  padding: 10px;
+}
+
+section.form-contact form input[type='submit'] {
+  align-self: flex-end;
+  width: 100px;
+  padding: 10px;
+}
+
+/* Le pied de page */
+footer {
+  background-color: hsl(220, 6%, 48%);
+  height: 75px;
+}
+
+/* Style de page d'écran de très petite taille (téléphone portable de maximum 600px) */
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  section h1.firm-title {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 3em;
+    font-style: normal;
+    margin: 14px;
+  }
+
+  section p.main-desc,
+  section.why-choose-bloompetals > p,
+  section.form-contact {
+    width: 95%;
+  }
+
+  section.gallery-preview {
+    grid-template-columns: repeat(1, 216px);
+  }
+
+  section.services {
+    grid-template-columns: 400px;
+  }
+
+  section.about-team div {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+
+  section.why-choose-bloompetals div {
+    grid-template-columns: repeat(1, 300px);
+  }
+
+  section.image-gallery article {
+    columns: 1;
+  }
+}
+
+/* Style de page d'écran de petite taille (tablette en mode portrait et téléphone portable large de minimum 600px) */
+@media only screen and (min-width: 600px) {
+  section p.main-desc,
+  section.why-choose-bloompetals > p,
+  section.form-contact {
+    width: 75%;
+  }
+
+  section.gallery-preview {
+    grid-template-columns: repeat(1, 216px);
+  }
+
+  section.services {
+    grid-template-columns: 400px;
+  }
+
+  section.about-team div {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+
+  section.why-choose-bloompetals div {
+    grid-template-columns: repeat(1, 300px);
+  }
+
+  section.image-gallery article {
+    columns: 2;
+  }
+}
+
+/* Style de page d'écran de moyenne taille (tablette en mode paysage de minimum 768px) */
+@media only screen and (min-width: 768px) {
+  section.gallery-preview {
+    grid-template-columns: repeat(2, 216px);
+    grid-template-rows: repeat(2, fit-content);
+  }
+
+  section.services {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  section.about-team div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  section.why-choose-bloompetals div {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  section.image-gallery article {
+    columns: 3;
+  }
+
+  section.form-contact {
+    width: 75%;
+  }
+}
+
+/* Style de page d'écran de grande taille (écran de bureau et de pc portable de minimum 992px) */
+@media only screen and (min-width: 992px) {
+  section.gallery-preview {
+    grid-template-columns: repeat(4, 216px);
+  }
+
+  section.services {
+    grid-template-columns: repeat(2, 400px);
+  }
+
+  section.about-team div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  section.why-choose-bloompetals div {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  section.image-gallery article {
+    columns: 4;
+  }
+
+  section.form-contact {
+    width: 65%;
+  }
+}
+
+/* Style de page d'écran de très grande taille (très grand écran de bureau et de pc portable de minimum 1200px) */
+@media only screen and (min-width: 1200px) {
+  section.services {
+    grid-template-columns: repeat(3, 325px);
+  }
+
+  section.why-choose-bloompetals div {
+    grid-template-columns: repeat(4, 300px);
+  }
+
+  section.image-gallery article {
+    columns: 4;
+  }
+
+  section.form-contact {
+    width: 50%;
+  }
+}
